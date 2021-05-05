@@ -6,13 +6,20 @@ Aplicativo para avaliação escrito em React, Javascript, Typescript e SASS.
 
 #### Clone o repositório  
 
-Clone down this repository. 
 
 `git clone https://github.com/MiguelNevesCamargoJunior/maxidoctor`
 
 
+#### Acesse o diretório
+
+Acesso o diretório
+
+`cd maxidoctor`
+
 #### Instale as dependências 
+
 Você precisa do `node` e do `npm` instalado globalmente na máquina.
+
 
 Usando o NPM:
 
