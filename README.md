@@ -12,7 +12,6 @@ Aplicativo para avaliação escrito em React, Javascript, Typescript e SASS.
 
 #### Acesse o diretório
 
-Acesso o diretório
 
 `cd maxidoctor`
 
