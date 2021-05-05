@@ -1,6 +1,6 @@
 ## MaxiDoctor
 
-Aplicativo para avaliação escrito em React, Typescript e SASS.
+Aplicativo para avaliação escrito em React, Javascript, Typescript e SASS.
 
 ## Instalação
 
