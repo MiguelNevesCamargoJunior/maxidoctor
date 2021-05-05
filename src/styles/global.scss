@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+button {
+  font: 0.8rem "Helvetica Neue", Arial, sans-serif;
+  font-weight: medium;
+  color: #e4deee;
+  cursor: pointer;
+  background: #9c83be;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 0.7rem 2rem;
+  margin-top: 1rem;
+  border: 0;
+  border-radius: 0.5rem;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.38);
+
+  transition: filter 0.2s;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.5;
+  }
+
+  &:hover:not(:disabled) {
+    filter: brightness(0.7);
+  }
+}
+
+body {
+  font: 16px "Helvetica Neue", Arial, sans-serif;
+
+  background: rgb(240, 234, 247);
+  height: auto;
+  color: #7e479b;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .mainContainer {
+    //background proporcional 9:16
+    height: 100vh;
+    width: 56.3vh;
+
+    background-image: url("/public/bg_maxidoctor.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    .welcomeContainer {
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h1 {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+    }
+
+    .formContainer {
+      padding: 40px 0px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+
+      .headerComponent {
+        header {
+          text-align: center;
+          width: 100%;
+
+          h2 {
+            font-weight: medium;
+            font-size: 0.9rem;
+            margin: 1rem 3rem;
+            line-height: 1.4rem;
+          }
+
+          img {
+            width: 43%;
+          }
+
+          @media screen and (min-width: 768px) {
+            h2 {
+              font-weight: medium;
+              font-size: 1.3rem;
+              margin: 1rem 3.5rem;
+              line-height: 1.7rem;
+            }
+
+            img {
+              margin-top: 1rem;
+              width: 45%;
+            }
+          }
+        }
+      }
+    }
+
+    .formComponent {
+      width: 70%;
+      margin: auto;
+      position: relative;
+
+      main {
+        button {
+          margin-top: 1.5rem;
+        }
+
+        .form {
+          border-bottom: 1px solid #aea3be;
+          width: 100%;
+
+          span {
+            color: #6b6a6b;
+
+            text-align: left;
+            font-weight: medium;
+            font-size: 0.7em;
+            position: relative;
+            top: -2px;
+            left: 0px;
+          }
+
+          input {
+         
+            font-size: 1.1rem;
+            color: #aea3be;
+            position: relative;
+            right: 0;
+            margin-right: 0px;
+            padding-left: 20px;
+            margin-top: 1.5rem;
+            width: 88%;
+            height: 2rem;
+            left: 0px;
+            border: none;
+
+            background: transparent;
+          }
+          input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+          select {
+            font-size: 1.1rem;
+            color: #aea3be;
+            //remove a seta padrão e coloca icone
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            background: transparent;
+            background: url("/public/seta.svg");
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
+            background-position: right 10px;
+
+            margin-left: 15px;
+            margin-right: 0px;
+            padding-left: 13px;
+            margin-top: .8rem;
+
+            width: 88%;
+            height: 2rem;
+            left: 0px;
+            border: none;
+          }
+        }
+        .errorText{
+          margin-top: 0.3rem;
+          font-size: 0.7rem;
+          font-weight: bold;
+        }
+        .successText{
+          margin-top: 1rem;
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+        .aboutText {
+          margin-top: 1rem;
+          font-size: 0.8rem;
+          font-weight: 500;
+          line-height: 1.3rem;
+          text-align: center !important;
+        }
+        @media screen and (min-width: 768px) {
+          
+        .aboutText {
+          font-size: 1rem;
+        }
+        }
+      }
+    }
+
+    .footerComponent {
+      footer {
+        img {
+          width: 60px;
+          height: 60px;
+          margin: 5px 5px;
+        }
+        @media screen and (min-width: 768px) {
+
+          img {
+            width: 80px;
+            height: 80px;
+            margin: 5px 5px;
+          }
+        }
+
+        div {
+          display: flex;
+          flex-direction: row;
+
+          &:first-of-type {
+            justify-content: space-around;
+          }
+
+          &:last-of-type {
+            justify-content: space-evenly;
+          }
+
+          .element {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            text-align: center;
+            padding: 5px 10px;
+
+            span {
+              font-size: 0.7rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
