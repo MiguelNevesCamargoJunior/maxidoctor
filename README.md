@@ -31,9 +31,11 @@ Usando o Yarn:
 #### Iniciar o servidor de desenvolvimento 
 
 Usando o NPM:
+
 `npm start`  
 
 Usando o Yarn:
+
 `yarn start`
 
 #### Para acessar o App 
