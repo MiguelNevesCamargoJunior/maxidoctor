@@ -17,6 +17,7 @@ module.exports = {
   devServer:{
     contentBase: path.resolve(__dirname, 'public'),
     hot: true,
+    host: '0.0.0.0',
     historyApiFallback: true,
   },
   plugins: [

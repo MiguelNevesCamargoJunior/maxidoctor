@@ -48,10 +48,14 @@ body {
   justify-content: center;
 
   .mainContainer {
-    //background proporcional 9:16
+    width: 100vw;
     height: 100vh;
-    width: 56.3vh;
 
+    @media screen and (min-width: 768px) {
+      //background proporcional 9:16
+      height: 100vh;
+      width: 56.3vh;
+    }
     background-image: url("/public/bg_maxidoctor.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -120,7 +124,7 @@ body {
 
       main {
         button {
-          margin-top: 1.5rem;
+          margin-top: 1rem;
         }
 
         .form {
@@ -133,13 +137,9 @@ body {
             text-align: left;
             font-weight: medium;
             font-size: 0.7em;
-            position: relative;
-            top: -2px;
-            left: 0px;
           }
 
           input {
-         
             font-size: 1.1rem;
             color: #aea3be;
             position: relative;
@@ -154,16 +154,17 @@ body {
 
             background: transparent;
           }
-          input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
 
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-}
+          input::-webkit-outer-spin-button,
+          input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+
+          /* Firefox */
+          input[type="number"] {
+            -moz-appearance: textfield;
+          }
 
           select {
             font-size: 1.1rem;
@@ -182,7 +183,7 @@ input[type=number] {
             margin-left: 15px;
             margin-right: 0px;
             padding-left: 13px;
-            margin-top: .8rem;
+            margin-top: 0.8rem;
 
             width: 88%;
             height: 2rem;
@@ -190,16 +191,19 @@ input[type=number] {
             border: none;
           }
         }
-        .errorText{
+
+        .errorText {
           margin-top: 0.3rem;
           font-size: 0.7rem;
           font-weight: bold;
         }
-        .successText{
+
+        .successText {
           margin-top: 1rem;
           font-size: 1.5rem;
           font-weight: bold;
         }
+
         .aboutText {
           margin-top: 1rem;
           font-size: 0.8rem;
@@ -207,11 +211,11 @@ input[type=number] {
           line-height: 1.3rem;
           text-align: center !important;
         }
+
         @media screen and (min-width: 768px) {
-          
-        .aboutText {
-          font-size: 1rem;
-        }
+          .aboutText {
+            font-size: 1rem;
+          }
         }
       }
     }
@@ -223,8 +227,8 @@ input[type=number] {
           height: 60px;
           margin: 5px 5px;
         }
-        @media screen and (min-width: 768px) {
 
+        @media screen and (min-width: 768px) {
           img {
             width: 80px;
             height: 80px;
