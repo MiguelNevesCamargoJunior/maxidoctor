@@ -73,10 +73,11 @@ export function FormComponent() {
               );
             })}
           </select>
-          <div className="errorText">
+          
+        </div>
+        <div className="errorText">
             {errors.uf?.type === "required" && "Selecione um estado"}
           </div>
-        </div>
         <button type="submit">Continue</button>
 
         <div className="aboutText">

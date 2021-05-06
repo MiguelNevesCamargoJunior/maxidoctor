@@ -7,7 +7,7 @@
 
 button {
   font: 0.8rem "Helvetica Neue", Arial, sans-serif;
-  font-weight: medium;
+  font-weight: bold;
   color: #e4deee;
   cursor: pointer;
   background: #9c83be;
@@ -39,7 +39,8 @@ body {
   font: 16px "Helvetica Neue", Arial, sans-serif;
 
   background: rgb(240, 234, 247);
-  height: auto;
+  width: 100%;
+  height: 100vh;
   color: #7e479b;
   text-transform: uppercase;
   display: flex;
@@ -48,23 +49,14 @@ body {
   justify-content: center;
 
   .mainContainer {
-    width: 100vw;
-    height: 100vh;
+    height: 100%;
 
-    @media screen and (min-width: 768px) {
-      //background proporcional 9:16
+    @media screen and (max-width: 768px) {
       height: 100vh;
-      width: 56.3vh;
+      width: 100vw;
     }
-    background-image: url("/public/bg_maxidoctor.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
 
     .welcomeContainer {
-      width: 100%;
-      height: 100%;
-
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -77,8 +69,13 @@ body {
     }
 
     .formContainer {
-      padding: 40px 0px;
+      background-image: url("/public/bg_maxidoctor.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      padding: 35px 0px;
       height: 100%;
+
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -90,28 +87,15 @@ body {
           width: 100%;
 
           h2 {
-            font-weight: medium;
+            font-weight: bold;
             font-size: 0.9rem;
-            margin: 1rem 3rem;
-            line-height: 1.4rem;
+            margin: 1rem 3.5rem;
+            line-height: 1.2rem;
           }
 
           img {
-            width: 43%;
-          }
-
-          @media screen and (min-width: 768px) {
-            h2 {
-              font-weight: medium;
-              font-size: 1.3rem;
-              margin: 1rem 3.5rem;
-              line-height: 1.7rem;
-            }
-
-            img {
-              margin-top: 1rem;
-              width: 45%;
-            }
+            margin-top: 1rem;
+            width: 45%;
           }
         }
       }
@@ -135,7 +119,7 @@ body {
             color: #6b6a6b;
 
             text-align: left;
-            font-weight: medium;
+            font-weight: bold;
             font-size: 0.7em;
           }
 
@@ -180,7 +164,7 @@ body {
             background-size: 20px 20px;
             background-position: right 10px;
 
-            margin-left: 15px;
+            margin-left: 14px;
             margin-right: 0px;
             padding-left: 13px;
             margin-top: 0.8rem;
@@ -211,27 +195,21 @@ body {
           line-height: 1.3rem;
           text-align: center !important;
         }
-
-        @media screen and (min-width: 768px) {
-          .aboutText {
-            font-size: 1rem;
-          }
-        }
       }
     }
 
     .footerComponent {
       footer {
         img {
-          width: 60px;
-          height: 60px;
+          width: 40px;
+          height: 40px;
           margin: 5px 5px;
         }
 
         @media screen and (min-width: 768px) {
           img {
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             margin: 5px 5px;
           }
         }
@@ -263,5 +241,11 @@ body {
         }
       }
     }
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  body {
+    height: 100vh;
   }
 }
